@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: openapi/gptzero-openapi-original.json
+docs: https://app.gptzero.me/app/api
+docs_note: API keys are generated in the GPTZero dashboard (app.gptzero.me/app/api) and sent in the X-API-Key request header. Keys can be rotated per environment. API access requires the Professional plan.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: X-API-Key
+  sources:
+  - openapi/gptzero-openapi-original.json
