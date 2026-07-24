@@ -1,0 +1,158 @@
+openapi: 3.0.3
+info:
+  title: GPTZero Batch API
+  description: AI content detection API for analyzing text to detect AI-generated content.
+  version: 1.0.0
+  x-jentic-source-url: https://gptzero.stoplight.io/
+  contact: {}
+servers:
+- url: https://api.gptzero.me/v2
+security:
+- ApiKeyAuth: []
+tags:
+- name: Batch
+  description: Batch processing
+paths:
+  /batch:
+    post:
+      tags:
+      - Batch
+      summary: Create batch analysis
+      operationId: createBatchAnalysis
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchInput'
+      responses:
+        '201':
+          description: Batch created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Batch'
+      description: Create batch analysis
+  /batch/{batchId}:
+    get:
+      tags:
+      - Batch
+      summary: Get batch status
+      operationId: getBatchStatus
+      parameters:
+      - name: batchId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Batch'
+      description: Get batch status
+  /batch/{batchId}/results:
+    get:
+      tags:
+      - Batch
+      summary: Get batch results
+      operationId: getBatchResults
+      parameters:
+      - name: batchId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AnalysisResult'
+      description: Get batch results
+components:
+  schemas:
+    BatchInput:
+      type: object
+      required:
+      - documents
+      properties:
+        documents:
+          type: array
+          items:
+            type: string
+    Batch:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - processing
+          - completed
+          - failed
+        totalDocuments:
+          type: integer
+        processedDocuments:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+    AnalysisResult:
+      type: object
+      properties:
+        id:
+          type: string
+        documentId:
+          type: string
+        completely_generated_prob:
+          type: number
+          format: float
+          description: Probability that text is completely AI-generated
+        average_generated_prob:
+          type: number
+          format: float
+          description: Average probability across sentences
+        overall_burstiness:
+          type: number
+          format: float
+        perplexity:
+          type: number
+          format: float
+        sentences:
+          type: array
+          items:
+            type: object
+            properties:
+              sentence:
+                type: string
+              generated_prob:
+                type: number
+                format: float
+              perplexity:
+                type: number
+                format: float
+        classification:
+          type: string
+          enum:
+          - human
+          - ai
+          - mixed
+        createdAt:
+          type: string
+          format: date-time
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key

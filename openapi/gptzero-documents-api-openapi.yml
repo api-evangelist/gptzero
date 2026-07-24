@@ -1,0 +1,81 @@
+openapi: 3.0.3
+info:
+  title: GPTZero Batch Documents API
+  description: AI content detection API for analyzing text to detect AI-generated content.
+  version: 1.0.0
+  x-jentic-source-url: https://gptzero.stoplight.io/
+  contact: {}
+servers:
+- url: https://api.gptzero.me/v2
+security:
+- ApiKeyAuth: []
+tags:
+- name: Documents
+  description: Document analysis
+paths:
+  /predict/files:
+    post:
+      tags:
+      - Documents
+      summary: Analyze document
+      operationId: analyzeDocument
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Analysis complete
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentAnalysisResult'
+      description: Analyze document
+components:
+  schemas:
+    DocumentAnalysisResult:
+      type: object
+      properties:
+        id:
+          type: string
+        filename:
+          type: string
+        classification:
+          type: string
+          enum:
+          - human
+          - ai
+          - mixed
+        completely_generated_prob:
+          type: number
+          format: float
+        pageResults:
+          type: array
+          items:
+            type: object
+            properties:
+              pageNumber:
+                type: integer
+              classification:
+                type: string
+                enum:
+                - human
+                - ai
+                - mixed
+              generated_prob:
+                type: number
+                format: float
+        createdAt:
+          type: string
+          format: date-time
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
