@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/ on gptzero.me and api.gptzero.me
+note: No well-known discovery documents are served. All probed paths return 301 redirects (redirect loop to :443) with no usable document; none returned 200.
+hosts:
+- host: https://api.gptzero.me
+  documents:
+  - {path: /.well-known/security.txt, status: 301}
+  - {path: /.well-known/openid-configuration, status: 301}
+  - {path: /.well-known/oauth-authorization-server, status: 301}
+  - {path: /.well-known/api-catalog, status: 301}
+  - {path: /.well-known/ai-plugin.json, status: 301}
+- host: https://gptzero.me
+  documents:
+  - {path: /.well-known/security.txt, status: 301}
+  - {path: /.well-known/ai-plugin.json, status: 301}
+  - {path: /.well-known/api-catalog, status: 301}

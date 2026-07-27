@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://gptzero.me/pricing
+currency: USD
+note: API access is bundled with the Professional plan; there is no standalone API product tier. Word allowances are monthly. Prices shown are annual-billed monthly equivalents where noted.
+plans:
+- name: Free
+  price: 0
+  period: month
+  words_per_month: 10000
+  api_access: false
+- name: Essential
+  price: 8.33
+  period: month
+  billing: annual
+  words_per_month: 150000
+  api_access: false
+- name: Premium
+  price: 12.99
+  period: month
+  billing: annual
+  words_per_month: 300000
+  api_access: false
+- name: Professional
+  price: 24.99
+  period: month
+  billing: annual
+  words_per_month: 500000
+  batch_files: 250
+  api_access: true

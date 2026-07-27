@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/gptzero-openapi-original.json
+skills:
+- file: gptzero-detect-ai-text.md
+  name: Detect AI-generated text with GPTZero
+  api: openapi/gptzero-openapi-original.json
+  operations: [analyzeText, getReport]
+- file: gptzero-batch-analysis.md
+  name: Run a batch AI-detection job with GPTZero
+  api: openapi/gptzero-openapi-original.json
+  operations: [createBatchAnalysis, getBatchStatus, getBatchResults]

@@ -1,0 +1,18 @@
+{
+  "provider": "gptzero",
+  "sources": [
+    "gptzero-batch-api-openapi.yml",
+    "gptzero-detection-api-openapi.yml",
+    "gptzero-documents-api-openapi.yml"
+  ],
+  "outputs": [
+    "gptzero-batch-api-openapi.yml",
+    "gptzero-detection-api-openapi.yml",
+    "gptzero-documents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

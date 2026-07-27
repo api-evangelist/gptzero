@@ -1,8 +1,27 @@
 aid: gptzero
 name: GPTZero
-description: 'GPTZero is a company surfaced as a portfolio company of uncork-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'GPTZero is an AI content detection company whose v2 API analyzes text
+  and uploaded documents to determine whether content was written by a human, by AI,
+  or is a mix of both. The API returns document-, paragraph-, and sentence-level probabilities
+  along with supporting perplexity and burstiness signals, plus asynchronous batch
+  analysis and aggregate reporting. Authentication is via an X-API-Key header, requests
+  are rate limited to 30,000 per hour, and API access is bundled with the Professional
+  plan. GPTZero was surfaced as a portfolio company of Uncork Capital and has been
+  enriched into the API Evangelist network from its public developer surface.'
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://gptzero.me/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/gptzero/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +31,53 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai
-apis: []
+- AI Detection
+- Content Moderation
+- Machine Learning
+- Text Analysis
+- Natural Language Processing
+- Education
+apis:
+- aid: gptzero:gptzero-batch-api
+  name: GPTZero Batch API
+  description: Batch processing
+  humanURL: https://gptzero.stoplight.io/
+  baseURL: https://api.gptzero.me/v2
+  tags:
+  - Batch
+  properties:
+  - type: OpenAPI
+    url: openapi/gptzero-batch-api-openapi.yml
+  - type: APIReference
+    url: https://gptzero.stoplight.io/docs/gptzero-api/5bf295g49gwxp-gpt-zero-api
+- aid: gptzero:gptzero-detection-api
+  name: GPTZero Detection API
+  description: AI content detection
+  humanURL: https://gptzero.stoplight.io/
+  baseURL: https://api.gptzero.me/v2
+  tags:
+  - Detection
+  properties:
+  - type: OpenAPI
+    url: openapi/gptzero-detection-api-openapi.yml
+  - type: APIReference
+    url: https://gptzero.stoplight.io/docs/gptzero-api/5bf295g49gwxp-gpt-zero-api
+- aid: gptzero:gptzero-documents-api
+  name: GPTZero Documents API
+  description: Document analysis
+  humanURL: https://gptzero.stoplight.io/
+  baseURL: https://api.gptzero.me/v2
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/gptzero-documents-api-openapi.yml
+  - type: APIReference
+    url: https://gptzero.stoplight.io/docs/gptzero-api/5bf295g49gwxp-gpt-zero-api
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +86,68 @@ maintainers:
 common:
 - type: Website
   url: https://gptzero.me
+- type: DeveloperPortal
+  url: https://gptzero.me/developers
+- type: Documentation
+  url: https://gptzero.stoplight.io/
+- type: APIReference
+  url: https://gptzero.stoplight.io/docs/gptzero-api/5bf295g49gwxp-gpt-zero-api
+- type: GettingStarted
+  url: https://support.gptzero.me/hc/en-us/articles/15525014408215-How-can-I-get-the-API-and-request-code-samples
+- type: Support
+  url: https://support.gptzero.me
+- type: Blog
+  url: https://gptzero.me/news
+- type: GitHubOrganization
+  url: https://github.com/GPTZero
+- type: Pricing
+  url: https://gptzero.me/pricing
+- type: SignUp
+  url: https://app.gptzero.me/login
+- type: TermsOfService
+  url: https://gptzero.me/terms-of-use.html
+- type: PrivacyPolicy
+  url: https://gptzero.me/privacy-policy.html
+- type: Integrations
+  url: https://gptzero.me/integrations
+- type: OpenAPI
+  url: openapi/gptzero-openapi-original.json
+- type: Authentication
+  url: authentication/gptzero-authentication.yml
+- type: Packages
+  url: packages/gptzero-packages.yml
+- type: SDKs
+  url: packages/gptzero-packages.yml
+- type: MCPServer
+  url: mcp/gptzero-mcp.yml
+- type: AgentSkill
+  url: skills/gptzero-detect-ai-text.md
+- type: AgentSkill
+  url: skills/gptzero-batch-analysis.md
+- type: LLMsTxt
+  url: llms/gptzero-llms.txt
+- type: Overlay
+  url: overlays/gptzero-openapi-overlay.yaml
+- type: Conformance
+  url: conformance/gptzero-conformance.yml
+- type: Conventions
+  url: conventions/gptzero-conventions.yml
+- type: Lifecycle
+  url: lifecycle/gptzero-lifecycle.yml
+- type: ChangeLog
+  url: changelog/gptzero-changelog.yml
+- type: DataModel
+  url: data-model/gptzero-data-model.yml
+- type: RateLimits
+  url: rate-limits/gptzero-rate-limits.yml
+- type: Plans
+  url: plans/gptzero-plans.yml
+- type: DomainSecurity
+  url: security/gptzero-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/gptzero-agentic-access.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

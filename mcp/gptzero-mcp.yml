@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: openapi/gptzero-openapi-original.json
+note: GPTZero publishes no official hosted/remote MCP server. A community stdio server exists (github.com/louis030195/gptzero-mcp, unofficial, ~1 star). The tool list below is a candidate derived one-to-one from the v2 OpenAPI operations.
+community_servers:
+- name: gptzero-mcp
+  repo: https://github.com/louis030195/gptzero-mcp
+  official: false
+server:
+  name: gptzero
+  transport: stdio
+  auth: X-API-Key
+tools:
+- name: analyze_text
+  description: Analyze a text passage for AI-generated content (document/paragraph/sentence probabilities).
+  source_operation: openapi/gptzero-openapi-original.json#analyzeText
+- name: analyze_document
+  description: Analyze an uploaded document file (PDF/DOCX/TXT) for AI-generated content.
+  source_operation: openapi/gptzero-openapi-original.json#analyzeDocument
+- name: create_batch_analysis
+  description: Submit multiple documents for asynchronous batch analysis.
+  source_operation: openapi/gptzero-openapi-original.json#createBatchAnalysis
+- name: get_batch_status
+  description: Get the status of a batch analysis job.
+  source_operation: openapi/gptzero-openapi-original.json#getBatchStatus
+- name: get_batch_results
+  description: Retrieve results of a completed batch analysis.
+  source_operation: openapi/gptzero-openapi-original.json#getBatchResults
+- name: list_reports
+  description: List historical detection reports.
+  source_operation: openapi/gptzero-openapi-original.json#listReports
+- name: get_report
+  description: Retrieve a specific detection report by id.
+  source_operation: openapi/gptzero-openapi-original.json#getReport

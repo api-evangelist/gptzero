@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://gptzero.stoplight.io/docs/gptzero-api/, https://support.gptzero.me/
+summary: Cross-cutting request/response semantics for the GPTZero v2 AI-detection API, derived from the OpenAPI and the published docs.
+authentication:
+  style: api-key
+  header: X-API-Key
+  docs: https://app.gptzero.me/app/api
+  cross_ref: authentication/gptzero-authentication.yml
+base_url: https://api.gptzero.me/v2
+versioning:
+  style: uri-path
+  current: v2
+  cross_ref: lifecycle/gptzero-lifecycle.yml
+idempotency:
+  supported: false
+  note: No idempotency-key header or parameter is documented; detection calls are read-style scoring operations and batch creation returns a batch id.
+pagination:
+  supported: false
+  note: The reports and batch-results collections are not documented with cursor/offset pagination parameters in the published OpenAPI.
+async:
+  supported: true
+  style: polling
+  note: Large workloads use POST /batch (returns a batch id), then poll GET /batch/{batchId} for status and GET /batch/{batchId}/results for results. No webhooks/callbacks are documented.
+rate_limiting:
+  limit: 30000 requests per hour (all plans)
+  headers_documented: false
+  cross_ref: rate-limits/gptzero-rate-limits.yml
+error_envelope:
+  documented: false
+  note: The published OpenAPI documents only 2xx responses; a structured error/problem envelope is not published.
+content_type: application/json (POST /predict/files accepts multipart/form-data for uploads)

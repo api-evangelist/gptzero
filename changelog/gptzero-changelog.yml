@@ -1,0 +1,9 @@
+generated: '2026-07-19'
+method: searched
+source: https://gptzero.notion.site/GPTZero-Release-Notes-Model-and-API-6f58686f6381498baef35212463b7da6
+scheme: dated-release-notes
+title: GPTZero Release Notes (Model and API)
+url: https://gptzero.notion.site/GPTZero-Release-Notes-Model-and-API-6f58686f6381498baef35212463b7da6
+note: GPTZero publishes combined model + API release notes on a public Notion page. The live page is the source of truth; entries below capture that the surface exists. Detailed dated entries are maintained by GPTZero on the Notion page.
+current_api_version: v2
+entries: []

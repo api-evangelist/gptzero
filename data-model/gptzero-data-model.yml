@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/gptzero-openapi-original.json
+entities:
+- name: AnalysisResult
+  description: Result of scoring a single text passage for AI authorship, with document-, paragraph-, and sentence-level probabilities.
+  key: id
+  fields: [id, documentId, completely_generated_prob, average_generated_prob, overall_burstiness, perplexity, sentences, classification, createdAt]
+  produced_by: [analyzeText]
+- name: DocumentAnalysisResult
+  description: Result of analyzing an uploaded document file (PDF/DOCX/TXT), with per-page classifications.
+  key: id
+  fields: [id, filename, classification, completely_generated_prob, pageResults, createdAt]
+  produced_by: [analyzeDocument]
+- name: Batch
+  description: An asynchronous batch analysis job over multiple documents.
+  key: id
+  fields: [id, status, totalDocuments, processedDocuments, createdAt, completedAt]
+  produced_by: [createBatchAnalysis, getBatchStatus]
+- name: Report
+  description: Aggregate report summarizing classifications across a set of analyzed documents.
+  key: id
+  fields: [id, documentCount, averageGeneratedProb, classifications, createdAt]
+  produced_by: [listReports, getReport]
+relationships:
+- from: Batch
+  to: DocumentAnalysisResult
+  type: has_many
+  via: getBatchResults
+  note: A batch produces many per-document analysis results, retrieved via GET /batch/{batchId}/results.
+- from: Report
+  to: AnalysisResult
+  type: has_many
+  via: documentCount
+  note: A report aggregates classifications across many analyzed documents.
+enums:
+  classification: [human, ai, mixed]
+  batch_status: [pending, processing, completed, failed]

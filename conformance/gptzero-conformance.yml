@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/gptzero-openapi-original.json
+standards:
+- id: oauth2
+  conforms: false
+  evidence: securityScheme is apiKey (X-API-Key header), no oauth2 flows declared.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: OpenAPI documents only 2xx responses; no application/problem+json responses.
+- id: json:api
+  conforms: false
+- id: pagination
+  conforms: false
+  evidence: No cursor/offset pagination parameters documented on collection endpoints.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header/parameter documented.
+- id: openapi-3.0
+  conforms: true
+  evidence: Published OpenAPI 3.0.3 document (via Jentic).

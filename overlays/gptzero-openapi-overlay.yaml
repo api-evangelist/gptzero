@@ -1,0 +1,21 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for GPTZero API
+  version: 1.0.0
+extends: openapi/gptzero-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 3
+    x-api-evangelist-enriched: '2026-07-19'
+    x-authentication: api-key (X-API-Key header)
+    x-rate-limit: 30000 requests/hour (all plans)
+- target: $.info
+  update:
+    x-changelog: https://gptzero.notion.site/GPTZero-Release-Notes-Model-and-API-6f58686f6381498baef35212463b7da6
+    x-pricing: https://gptzero.me/pricing
+- target: $.tags
+  update:
+  - name: Detection
+    description: AI content detection
+    x-marquee: true

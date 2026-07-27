@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/gptzero, https://pypi.org/project/gptzero/
+packages:
+- language: javascript
+  registry: npm
+  name: gptzero
+  url: https://www.npmjs.com/package/gptzero
+  install: npm install gptzero
+  repository: https://github.com/GPTZero/gptzero-js
+  official: true
+  note: First-party JavaScript/TypeScript client published by the GPTZero GitHub org (gptzero-js).
+- language: python
+  registry: pypi
+  name: gptzero
+  url: https://pypi.org/project/gptzero/
+  install: pip install gptzero
+  repository: https://github.com/Haste171/gptzero
+  official: false
+  note: Community asynchronous Python wrapper for the GPTZero API (author David Peterson / Haste171); not maintained by GPTZero.

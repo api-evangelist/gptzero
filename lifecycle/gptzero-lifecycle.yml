@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: https://gptzero.stoplight.io/, https://gptzero.notion.site/GPTZero-Release-Notes-Model-and-API-6f58686f6381498baef35212463b7da6
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://gptzero.stoplight.io/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation/sunset policy (RFC 8594) is published.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+changelog: https://gptzero.notion.site/GPTZero-Release-Notes-Model-and-API-6f58686f6381498baef35212463b7da6
+deprecated_operations: []

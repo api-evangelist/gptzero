@@ -1,0 +1,11 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.gptzero.me/articles/7371584464-what-is-the-rate-limit
+rate_limits:
+- scope: account
+  limit_count: 30000
+  window: hour
+  applies_to: All subscription plans
+  note: The rate limit for all subscription plans is 30,000 requests an hour. Users needing a higher limit can contact api@gptzero.me.
+contact_for_increase: api@gptzero.me
+headers_documented: false
