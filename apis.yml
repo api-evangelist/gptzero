@@ -111,7 +111,7 @@ common:
 - type: Integrations
   url: https://gptzero.me/integrations
 - type: OpenAPI
-  url: openapi/gptzero-openapi-original.json
+  url: openapi/_original/gptzero-openapi-original.json
 - type: Authentication
   url: authentication/gptzero-authentication.yml
 - type: Packages
