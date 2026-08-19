@@ -1,0 +1,156 @@
+{
+  "item": [
+    {
+      "id": "c5473608-a5ef-47e1-b91c-93da4f30c59c",
+      "name": "Documents",
+      "description": {
+        "content": "Document analysis",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "603c10b5-72e2-4b03-af61-a466134160f5",
+          "name": "Analyze document",
+          "request": {
+            "name": "Analyze document",
+            "description": {
+              "content": "Analyze document",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "predict",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "859cfea5-aa70-4756-a121-9fa7476c0443",
+              "name": "Analysis complete",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "predict",
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"filename\": \"string\",\n  \"classification\": \"human\",\n  \"completely_generated_prob\": 2368.329157759007,\n  \"pageResults\": [\n    {\n      \"pageNumber\": 8208,\n      \"classification\": \"ai\",\n      \"generated_prob\": 8245.476593991354\n    },\n    {\n      \"pageNumber\": 2717,\n      \"classification\": \"ai\",\n      \"generated_prob\": 6742.346855710619\n    }\n  ],\n  \"createdAt\": \"2018-03-18T22:32:19.891Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.gptzero.me/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3f6ad30c-f2d7-4428-89fe-58c5770c9f05",
+    "name": "GPTZero Batch Documents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI content detection API for analyzing text to detect AI-generated content.",
+      "type": "text/plain"
+    }
+  }
+}

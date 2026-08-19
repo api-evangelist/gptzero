@@ -2,7 +2,8 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: openapi/gptzero-openapi-original.json
-note: GPTZero publishes no official hosted/remote MCP server. A community stdio server exists (github.com/louis030195/gptzero-mcp, unofficial, ~1 star). The tool list below is a candidate derived one-to-one from the v2 OpenAPI operations.
+note: GPTZero publishes no official hosted/remote MCP server. A community stdio server exists (github.com/louis030195/gptzero-mcp,
+  unofficial, ~1 star). The tool list below is a candidate derived one-to-one from the v2 OpenAPI operations.
 community_servers:
 - name: gptzero-mcp
   repo: https://github.com/louis030195/gptzero-mcp
@@ -33,3 +34,9 @@ tools:
 - name: get_report
   description: Retrieve a specific detection report by id.
   source_operation: openapi/gptzero-openapi-original.json#getReport
+deployment:
+  mode: none
+  verified: derived
+  tools: 7
+  checked: '2026-08-12'
+  source: catalog MCP census

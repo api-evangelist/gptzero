@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "GPTZero Batch API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Batch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create batch analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.gptzero.me/v2/batch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create batch analysis"
+        },
+        {
+          "info": {
+            "name": "Get batch status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gptzero.me/v2/batch/:batchId",
+            "params": [
+              {
+                "name": "batchId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get batch status"
+        },
+        {
+          "info": {
+            "name": "Get batch results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gptzero.me/v2/batch/:batchId/results",
+            "params": [
+              {
+                "name": "batchId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get batch results"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

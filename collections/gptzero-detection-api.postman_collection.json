@@ -1,0 +1,344 @@
+{
+  "item": [
+    {
+      "id": "047e3912-9e02-42cc-899d-f831ff8eb3f8",
+      "name": "Detection",
+      "description": {
+        "content": "AI content detection",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1ec9fe67-6a43-4ada-a0a1-bb8e86e616fc",
+          "name": "Analyze text",
+          "request": {
+            "name": "Analyze text",
+            "description": {
+              "content": "Analyze text",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "predict",
+                "text"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": \"<string>\",\n  \"multilingual\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "df1b0692-6912-4a6c-b840-1616e3df9855",
+              "name": "Analysis complete",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "predict",
+                    "text"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": \"<string>\",\n  \"multilingual\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"documentId\": \"string\",\n  \"completely_generated_prob\": 2717.782305011075,\n  \"average_generated_prob\": 590.5195970132893,\n  \"overall_burstiness\": 1135.1708119097682,\n  \"perplexity\": 4812.685687851232,\n  \"sentences\": [\n    {\n      \"sentence\": \"string\",\n      \"generated_prob\": 7395.743414211618,\n      \"perplexity\": 5613.80733724549\n    },\n    {\n      \"sentence\": \"string\",\n      \"generated_prob\": 6608.956303461146,\n      \"perplexity\": 8114.174175415341\n    }\n  ],\n  \"classification\": \"mixed\",\n  \"createdAt\": \"1975-09-24T14:35:09.076Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ccd75550-2c85-4115-ad06-009eb141f036",
+          "name": "List reports",
+          "request": {
+            "name": "List reports",
+            "description": {
+              "content": "List reports",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "reports"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4d3ad08-81ee-46f6-8e54-b1fff3e4dc7a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"documentCount\": 4192,\n    \"averageGeneratedProb\": 7123.304328986744,\n    \"classifications\": {\n      \"human\": 2721,\n      \"ai\": 2713,\n      \"mixed\": 3680\n    },\n    \"createdAt\": \"1949-09-27T11:20:30.567Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"documentCount\": 6299,\n    \"averageGeneratedProb\": 6057.812958900026,\n    \"classifications\": {\n      \"human\": 3894,\n      \"ai\": 8204,\n      \"mixed\": 6059\n    },\n    \"createdAt\": \"1976-03-13T11:16:53.688Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40cd20f2-6aa4-4141-afa2-58ade7b76f52",
+          "name": "Get report",
+          "request": {
+            "name": "Get report",
+            "description": {
+              "content": "Get report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "reports",
+                ":reportId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "reportId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95cbeb42-2d90-4159-80f2-fb16900891cf",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    ":reportId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "reportId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"documentCount\": 5549,\n  \"averageGeneratedProb\": 955.8044172851799,\n  \"classifications\": {\n    \"human\": 6131,\n    \"ai\": 8376,\n    \"mixed\": 5197\n  },\n  \"createdAt\": \"1964-04-25T18:17:28.730Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.gptzero.me/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "96173278-607c-46fa-b71e-ae6e5059dc7e",
+    "name": "GPTZero Batch Detection API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI content detection API for analyzing text to detect AI-generated content.",
+      "type": "text/plain"
+    }
+  }
+}

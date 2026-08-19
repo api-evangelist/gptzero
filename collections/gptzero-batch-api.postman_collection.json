@@ -1,0 +1,342 @@
+{
+  "item": [
+    {
+      "id": "84e5dec8-f87b-421f-84c0-6def7a905c78",
+      "name": "Batch",
+      "description": {
+        "content": "Batch processing",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cc2bbf0c-b943-4b6f-a721-dd0cbf976503",
+          "name": "Create batch analysis",
+          "request": {
+            "name": "Create batch analysis",
+            "description": {
+              "content": "Create batch analysis",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"documents\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "81f59d07-5008-4904-a8b1-1ce19003d8f8",
+              "name": "Batch created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"documents\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"status\": \"completed\",\n  \"totalDocuments\": 1171,\n  \"processedDocuments\": 725,\n  \"createdAt\": \"1959-09-02T06:26:59.483Z\",\n  \"completedAt\": \"1959-11-15T11:23:04.900Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "49027e3b-c138-4200-875b-62d41bb14b92",
+          "name": "Get batch status",
+          "request": {
+            "name": "Get batch status",
+            "description": {
+              "content": "Get batch status",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                ":batchId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "batchId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a8ff2616-9c07-46b5-ab96-48417d71ee63",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    ":batchId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "batchId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"status\": \"completed\",\n  \"totalDocuments\": 1171,\n  \"processedDocuments\": 725,\n  \"createdAt\": \"1959-09-02T06:26:59.483Z\",\n  \"completedAt\": \"1959-11-15T11:23:04.900Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1de9dffb-f11a-40aa-81d0-73719ed75aae",
+          "name": "Get batch results",
+          "request": {
+            "name": "Get batch results",
+            "description": {
+              "content": "Get batch results",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                ":batchId",
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "batchId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad0d8037-ef9b-4098-8184-af5c6b3f0ec3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    ":batchId",
+                    "results"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "batchId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"documentId\": \"string\",\n    \"completely_generated_prob\": 6570.1044318508075,\n    \"average_generated_prob\": 8081.54529913094,\n    \"overall_burstiness\": 6765.043450756158,\n    \"perplexity\": 6861.754772976158,\n    \"sentences\": [\n      {\n        \"sentence\": \"string\",\n        \"generated_prob\": 8095.477323597661,\n        \"perplexity\": 9632.292406104474\n      },\n      {\n        \"sentence\": \"string\",\n        \"generated_prob\": 9765.996915591848,\n        \"perplexity\": 1420.7957000029214\n      }\n    ],\n    \"classification\": \"human\",\n    \"createdAt\": \"1954-01-13T05:30:45.955Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"documentId\": \"string\",\n    \"completely_generated_prob\": 4617.658840314554,\n    \"average_generated_prob\": 8830.163789088425,\n    \"overall_burstiness\": 4708.390864755366,\n    \"perplexity\": 5702.698955569697,\n    \"sentences\": [\n      {\n        \"sentence\": \"string\",\n        \"generated_prob\": 5550.586324131706,\n        \"perplexity\": 675.4604517073026\n      },\n      {\n        \"sentence\": \"string\",\n        \"generated_prob\": 7100.365598832008,\n        \"perplexity\": 3786.928365495639\n      }\n    ],\n    \"classification\": \"human\",\n    \"createdAt\": \"1980-08-30T18:45:46.185Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.gptzero.me/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a57797e8-f3aa-4b80-8e68-80da7e5b8c50",
+    "name": "GPTZero Batch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AI content detection API for analyzing text to detect AI-generated content.",
+      "type": "text/plain"
+    }
+  }
+}
