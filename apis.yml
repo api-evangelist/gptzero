@@ -8,6 +8,18 @@ description: 'GPTZero is an AI content detection company whose v2 API analyzes t
   are rate limited to 30,000 per hour, and API access is bundled with the Professional
   plan. GPTZero was surfaced as a portfolio company of Uncork Capital and has been
   enriched into the API Evangelist network from its public developer surface.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
