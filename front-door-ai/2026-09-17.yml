@@ -1,0 +1,33 @@
+# Front Door AI Index — gptzero — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: gptzero
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: gptzero.me
+  final_host: gptzero.me
+  ownership: own
+  owner: gptzero
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 110
+  host_score: 110
+  density: 55.5
+  words: 1982
+  tiers:
+    agentic: 0
+    core: 80
+    model: 30
+  ambiguous: 0
+  top_terms:
+    AI: 77
+    ChatGPT: 8
+    GPT: 8
+    Claude: 5
+    Gemini: 5
+    Llama: 3
+    LLMs: 2
+    OpenAI: 1
+    large language model: 1

@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: GPTZero Batch API
   description: AI content detection API for analyzing text to detect AI-generated content.
@@ -32,7 +32,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Batch'
-      description: Create batch analysis
   /batch/{batchId}:
     get:
       tags:
@@ -52,7 +51,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Batch'
-      description: Get batch status
   /batch/{batchId}/results:
     get:
       tags:
@@ -74,40 +72,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/AnalysisResult'
-      description: Get batch results
 components:
   schemas:
-    BatchInput:
-      type: object
-      required:
-      - documents
-      properties:
-        documents:
-          type: array
-          items:
-            type: string
-    Batch:
-      type: object
-      properties:
-        id:
-          type: string
-        status:
-          type: string
-          enum:
-          - pending
-          - processing
-          - completed
-          - failed
-        totalDocuments:
-          type: integer
-        processedDocuments:
-          type: integer
-        createdAt:
-          type: string
-          format: date-time
-        completedAt:
-          type: string
-          format: date-time
     AnalysisResult:
       type: object
       properties:
@@ -151,6 +117,37 @@ components:
         createdAt:
           type: string
           format: date-time
+    Batch:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - processing
+          - completed
+          - failed
+        totalDocuments:
+          type: integer
+        processedDocuments:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+    BatchInput:
+      type: object
+      required:
+      - documents
+      properties:
+        documents:
+          type: array
+          items:
+            type: string
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
