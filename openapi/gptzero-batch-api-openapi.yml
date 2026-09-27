@@ -74,6 +74,15 @@ paths:
                   $ref: '#/components/schemas/AnalysisResult'
 components:
   schemas:
+    BatchInput:
+      type: object
+      required:
+      - documents
+      properties:
+        documents:
+          type: array
+          items:
+            type: string
     AnalysisResult:
       type: object
       properties:
@@ -139,15 +148,6 @@ components:
         completedAt:
           type: string
           format: date-time
-    BatchInput:
-      type: object
-      required:
-      - documents
-      properties:
-        documents:
-          type: array
-          items:
-            type: string
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

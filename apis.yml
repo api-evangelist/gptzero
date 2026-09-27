@@ -51,7 +51,7 @@ tags:
 - Artificial Intelligence
 - AI Detection
 - Content Moderation
-- Machine-Learning
+- Machine Learning
 - Text Analysis
 - Natural Language Processing
 - Education
@@ -64,6 +64,7 @@ tags_raw:
 - Text Analysis
 - Natural Language Processing
 - Education
+- Machine-Learning
 apis:
 - aid: gptzero:gptzero-batch-api
   name: GPTZero Batch API
