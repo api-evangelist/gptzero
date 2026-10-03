@@ -79,6 +79,28 @@ paths:
                 $ref: '#/components/schemas/Report'
 components:
   schemas:
+    Report:
+      type: object
+      properties:
+        id:
+          type: string
+        documentCount:
+          type: integer
+        averageGeneratedProb:
+          type: number
+          format: float
+        classifications:
+          type: object
+          properties:
+            human:
+              type: integer
+            ai:
+              type: integer
+            mixed:
+              type: integer
+        createdAt:
+          type: string
+          format: date-time
     TextAnalysisInput:
       type: object
       required:
@@ -130,28 +152,6 @@ components:
           - human
           - ai
           - mixed
-        createdAt:
-          type: string
-          format: date-time
-    Report:
-      type: object
-      properties:
-        id:
-          type: string
-        documentCount:
-          type: integer
-        averageGeneratedProb:
-          type: number
-          format: float
-        classifications:
-          type: object
-          properties:
-            human:
-              type: integer
-            ai:
-              type: integer
-            mixed:
-              type: integer
         createdAt:
           type: string
           format: date-time

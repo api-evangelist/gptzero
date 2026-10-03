@@ -74,15 +74,28 @@ paths:
                   $ref: '#/components/schemas/AnalysisResult'
 components:
   schemas:
-    BatchInput:
+    Batch:
       type: object
-      required:
-      - documents
       properties:
-        documents:
-          type: array
-          items:
-            type: string
+        id:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - processing
+          - completed
+          - failed
+        totalDocuments:
+          type: integer
+        processedDocuments:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
     AnalysisResult:
       type: object
       properties:
@@ -126,28 +139,15 @@ components:
         createdAt:
           type: string
           format: date-time
-    Batch:
+    BatchInput:
       type: object
+      required:
+      - documents
       properties:
-        id:
-          type: string
-        status:
-          type: string
-          enum:
-          - pending
-          - processing
-          - completed
-          - failed
-        totalDocuments:
-          type: integer
-        processedDocuments:
-          type: integer
-        createdAt:
-          type: string
-          format: date-time
-        completedAt:
-          type: string
-          format: date-time
+        documents:
+          type: array
+          items:
+            type: string
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
