@@ -79,39 +79,6 @@ paths:
                 $ref: '#/components/schemas/Report'
 components:
   schemas:
-    Report:
-      type: object
-      properties:
-        id:
-          type: string
-        documentCount:
-          type: integer
-        averageGeneratedProb:
-          type: number
-          format: float
-        classifications:
-          type: object
-          properties:
-            human:
-              type: integer
-            ai:
-              type: integer
-            mixed:
-              type: integer
-        createdAt:
-          type: string
-          format: date-time
-    TextAnalysisInput:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          type: string
-          description: Text to analyze
-        multilingual:
-          type: boolean
-          default: false
     AnalysisResult:
       type: object
       properties:
@@ -155,6 +122,39 @@ components:
         createdAt:
           type: string
           format: date-time
+    Report:
+      type: object
+      properties:
+        id:
+          type: string
+        documentCount:
+          type: integer
+        averageGeneratedProb:
+          type: number
+          format: float
+        classifications:
+          type: object
+          properties:
+            human:
+              type: integer
+            ai:
+              type: integer
+            mixed:
+              type: integer
+        createdAt:
+          type: string
+          format: date-time
+    TextAnalysisInput:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          type: string
+          description: Text to analyze
+        multilingual:
+          type: boolean
+          default: false
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
