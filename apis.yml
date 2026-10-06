@@ -45,7 +45,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-10-06'
 tags:
 - Company
 - Artificial Intelligence
@@ -108,6 +108,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://gptzero.me/news/
+  type: Blog
+- url: https://gptzero.me/news/rss/
+  type: BlogRSS
 - type: Website
   url: https://gptzero.me
 - type: DeveloperPortal
