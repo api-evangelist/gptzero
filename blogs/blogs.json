@@ -5,7 +5,7 @@
       "source": "https://gptzero.me/news/",
       "feed_url": "https://gptzero.me/news/rss/",
       "title": "",
-      "saved": 2,
+      "saved": 0,
       "method": "discovered"
     },
     {
@@ -21,14 +21,8 @@
       "title": "",
       "saved": 0,
       "method": "discovered"
-    },
-    {
-      "source": "https://support.gptzero.me",
-      "feed_url": "",
-      "saved": 0,
-      "skipped": "community-shaped; a vendor feed already saved this run (roadmap#239)"
     }
   ],
-  "post_count": 2,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 15,
+  "fetched": "2026-10-17T14:53:57Z"
 }
