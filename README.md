@@ -64,6 +64,136 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-GPTZero is a company surfaced as a portfolio company of uncork-capital and added to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.
+GPTZero is an AI content detection company whose v2 API analyzes text and uploaded documents to determine whether content was written by a human, by AI, or is a mix of both. The API returns document-, paragraph-, and sentence-level probabilities along with supporting perplexity and burstiness signals, plus asynchronous batch analysis and aggregate reporting. Authentication is via an X-API-Key header, requests are rate limited to 30,000 per hour, and API access is bundled with the Professional plan. GPTZero was surfaced as a portfolio company of Uncork Capital and has been enriched into the API Evangelist network from its public developer surface.
 
-Backed by: uncork-capital — https://gptzero.me
+**Areas:** Company · Artificial Intelligence · AI Detection · Content Moderation · Machine Learning · Text Analysis · Natural Language Processing · Education
+
+## GPTZero on APIs.io
+
+Everything profiled for GPTZero is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gptzero/](https://apis.io/providers/gptzero/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [GPTZero Batch API](https://apis.io/apis/gptzero/gptzero-batch-api/) — Batch processing
+- [GPTZero Detection API](https://apis.io/apis/gptzero/gptzero-detection-api/) — AI content detection
+- [GPTZero Documents API](https://apis.io/apis/gptzero/gptzero-documents-api/) — Document analysis
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [gptzero](https://apis.io/servers/gptzero/gptzero/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Gptzero Agentic Access](https://apis.io/agentic-access/gptzero/gptzero-agentic-access/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [GPTZero Batch API](https://apis.io/collections/gptzero/open-gptzero-batch-api/)
+- [GPTZero Batch Detection API](https://apis.io/collections/gptzero/open-gptzero-detection-api/)
+- [GPTZero Batch Documents API](https://apis.io/collections/gptzero/open-gptzero-documents-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Gptzero Openapi Overlay](https://apis.io/overlays/gptzero/gptzero-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Gptzero Authentication](https://apis.io/security/gptzero/gptzero-authentication/)
+- [Gptzero Domain Security](https://apis.io/security/gptzero/gptzero-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Gptzero Plans](https://apis.io/plans/gptzero/gptzero-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Gptzero Rate Limits](https://apis.io/rate-limits/gptzero/gptzero-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://gptzero.me)
+- [Documentation](https://gptzero.stoplight.io/)
+- [Getting started](https://support.gptzero.me/hc/en-us/articles/15525014408215-How-can-I-get-the-API-and-request-code-samples)
+- [API reference](https://gptzero.stoplight.io/docs/gptzero-api/5bf295g49gwxp-gpt-zero-api)
+- [Pricing](https://gptzero.me/pricing)
+- [Sign up](https://app.gptzero.me/login)
+- [Support](https://support.gptzero.me)
+- [Blog](https://gptzero.me/news/)
+- [Terms of service](https://gptzero.me/terms-of-use.html)
+- [Privacy policy](https://gptzero.me/privacy-policy.html)
+- [GitHub](https://github.com/GPTZero)
+
+## API Evangelist rating
+
+**Kin Score 49.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 41.6 |
+| Contract governance | 4.5 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 63.2 |
+
+**Agent readiness 21.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.7** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gptzero/](https://apis.io/providers/gptzero/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for GPTZero: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gptzero/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
